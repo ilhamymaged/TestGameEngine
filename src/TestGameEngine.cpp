@@ -1,7 +1,7 @@
-﻿#include <iostream>
+﻿#include <GameEngine.h>
 
 int main()
 {
-	std::cout << "Hello CMake." << std::endl;
-	return 0;
+	GameEngine gameEngine("3D Game Engine", 1600, 900);
+	gameEngine.run();
 }
