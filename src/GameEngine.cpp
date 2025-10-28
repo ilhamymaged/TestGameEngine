@@ -1,4 +1,3 @@
-#include <GameInput.h>
 #include "GameEngine.h"
 
 GameEngine::GameEngine(const std::string& title, int width, int height)
@@ -13,5 +12,5 @@ GameEngine::~GameEngine()
 
 void GameEngine::run()
 {
-
+	Renderer::run(*windowManager);
 }

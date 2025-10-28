@@ -10,6 +10,9 @@ public:
 	WindowManager(const std::string& title, int width, int height);
 	~WindowManager();
 
+	inline void swapBuffers() { glfwSwapBuffers(window); }
+	inline void pullEvents() { glfwPollEvents(); }
+	inline bool shouldClose() { return glfwWindowShouldClose(window); }
 	inline GLFWwindow* getWindow() { return window; };
 
 private:

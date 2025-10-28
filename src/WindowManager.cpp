@@ -2,7 +2,7 @@
 
 WindowManager::WindowManager(const std::string& title, int width, int height)
 {
-	if (glfwInit())
+	if (!glfwInit())
 		std::cout << "DEBUG: FAILED TO INIT GLFW" << std::endl;
 
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
