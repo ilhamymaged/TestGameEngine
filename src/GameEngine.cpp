@@ -3,8 +3,8 @@
 GameEngine::GameEngine(const std::string& title, int width, int height)
 {
 	windowManager = std::make_unique<WindowManager>(title, width, height);
-	scene = std::make_unique<Scene>(ResourceManager::getEntitiesScene());
 	ResourceManager::loadAssets();
+	scene = std::make_unique<Scene>(ResourceManager::getEntitiesScene());
 }
 
 GameEngine::~GameEngine()

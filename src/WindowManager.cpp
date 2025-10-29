@@ -1,6 +1,7 @@
 #include <WindowManager.h>
 
 WindowManager::WindowManager(const std::string& title, int width, int height)
+	:width(width),height(height)
 {
 	if (!glfwInit())
 		std::cout << "DEBUG: FAILED TO INIT GLFW" << std::endl;
