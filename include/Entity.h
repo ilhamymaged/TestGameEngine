@@ -39,8 +39,8 @@ public:
 	inline Shader& getShader() { return shader; }
 
 private:
-	Mesh mesh;
+	Mesh& mesh;
 	Transform transform;
-	Shader shader;
+	Shader& shader;
 };
 

@@ -16,7 +16,7 @@ void Renderer::render(WindowManager& windowManager, Scene& scene)
             shader.use(); 
 
             glm::mat4 view = camera.getViewMat();
-            glm::mat4 projection = glm::perspective(camera.getFOV(),
+            glm::mat4 projection = glm::perspective(glm::radians(camera.getFOV()),
                 (float)windowManager.getWidth() / windowManager.getHeight(),0.1f, 100.0f);
             glm::mat4 model = entity.getTransform().getModelMatrix();
 

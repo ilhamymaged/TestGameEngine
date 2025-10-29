@@ -14,8 +14,8 @@ void ResourceManager::loadAssets()
 
 void ResourceManager::loadEntities()
 {
-	Mesh triangleMesh = Mesh::getTriangleMesh();
+	Mesh& triangleMesh = Mesh::getTriangleMesh();
 	Transform transform;
-	Shader shader("simple");
-	entities.push_back(Entity(triangleMesh, transform, shader));
+	static Shader shader("simple");
+	entities.emplace_back(triangleMesh, transform, shader);
 }
